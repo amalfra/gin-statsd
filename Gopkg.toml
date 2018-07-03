@@ -32,3 +32,11 @@
 [[constraint]]
   name = "gopkg.in/alexcesaro/statsd.v2"
   version = "2.0.0"
+
+[[constraint]]
+  name = "github.com/gin-gonic/gin"
+  version = "^1.2.0"
+
+[[constraint]]
+  name = "github.com/amalfra/recorder"
+  version = "0.0.1"
