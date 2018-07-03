@@ -26,3 +26,10 @@ func (o *Options) getAddress() string {
 	}
 	return fmt.Sprintf("%s:%d", host, port)
 }
+
+func (o *Options) getRequestKey() string {
+	if o.RequestKey != "" {
+		return o.RequestKey
+	}
+	return defaultRequestKey
+}
