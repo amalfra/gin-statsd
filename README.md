@@ -1,3 +1,10 @@
+gin-statsd
+========
+[![GitHub release](https://img.shields.io/github/release/amalfra/gin-statsd.svg)](https://github.com/amalfra/gin-statsd/releases)
+[![Build Status](https://travis-ci.org/amalfra/gin-statsd.svg?branch=master)](https://travis-ci.org/amalfra/gin-statsd)
+[![GoDoc](https://godoc.org/github.com/amalfra/gin-statsd?status.svg)](https://godoc.org/github.com/amalfra/gin-statsd)
+[![Go Report Card](https://goreportcard.com/badge/github.com/amalfra/gin-statsd)](https://goreportcard.com/report/github.com/amalfra/gin-statsd)
+
 ## Development
 Questions, problems or suggestions? Please post them on the [issue tracker](https://github.com/amalfra/gin-statsd/issues).
 
