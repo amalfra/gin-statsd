@@ -2,6 +2,7 @@ package middleware
 
 import (
 	"fmt"
+	"github.com/gin-gonic/gin"
 	"io"
 	"log"
 	"os"
@@ -43,18 +44,20 @@ func init() {
 
 // printLog outputs log to correct stream depending on level
 func printLog(msg string, level logLevel) {
-	var l *log.Logger
+	if gin.IsDebugging() || (!gin.IsDebugging() && level > infoLevel) {
+		var l *log.Logger
 
-	switch level {
-	case infoLevel:
-		l = infoLogger
-	case warningLevel:
-		l = warningLogger
-	case errorLevel:
-		l = errorLogger
-	default:
-		l = infoLogger
+		switch level {
+		case infoLevel:
+			l = infoLogger
+		case warningLevel:
+			l = warningLogger
+		case errorLevel:
+			l = errorLogger
+		default:
+			l = infoLogger
+		}
+
+		l.Println(msg)
 	}
-
-	l.Println(msg)
 }
