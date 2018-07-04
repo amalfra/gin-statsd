@@ -44,7 +44,7 @@ func New(opts Options) gin.HandlerFunc {
 		client = nil
 		printLog(fmt.Sprintf("Failed connecting to statsd - %s", clientErr.Error()), errorLevel)
 	} else {
-		printLog("Sucessfully connected to statsd", infoLevel)
+		printLog("Successfully connected to statsd", infoLevel)
 	}
 
 	return handlerFunc
