@@ -1,6 +1,5 @@
 os:
   - linux
-  - osx
 
 language: go
 
@@ -9,5 +8,9 @@ go:
   - 1.8.x
   - 1.9.x
   - 1.10.x
+
+before_install:
+  - curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh  
+  - dep ensure
 
 script: make test
