@@ -2,12 +2,6 @@
 
 
 [[projects]]
-  name = "github.com/amalfra/recorder"
-  packages = ["."]
-  revision = "40d682d3c8b1844c40fe9a2e213c0ec7f2334423"
-  version = "0.0.1"
-
-[[projects]]
   branch = "master"
   name = "github.com/gin-contrib/sse"
   packages = ["."]
@@ -68,6 +62,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "fcb5dee0d38dbecab0ac9ac64047454e97761813f720c57e535e59c7609e77ab"
+  inputs-digest = "90ce42dd78595b9d13e901416f8d3f074f7e0c76e1b6069f3502d23a783de5f8"
   solver-name = "gps-cdcl"
   solver-version = 1
