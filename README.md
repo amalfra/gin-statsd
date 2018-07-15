@@ -5,7 +5,7 @@ gin-statsd
 [![GoDoc](https://godoc.org/github.com/amalfra/gin-statsd?status.svg)](https://godoc.org/github.com/amalfra/gin-statsd/middleware)
 [![Go Report Card](https://goreportcard.com/badge/github.com/amalfra/gin-statsd)](https://goreportcard.com/report/github.com/amalfra/gin-statsd)
 
-A [Gin](https://gin-gonic.github.io/gin/) middleware for reporting to statsd deamon.
+A [Gin](https://gin-gonic.github.io/gin/) middleware for reporting to statsd daemon.
 
 ## Installation
 You can download the middleware using
@@ -40,8 +40,8 @@ All stats are namespaced under `statsdKey` key by default. This can be configure
 ### Configuring using Options
 The middleware allows configuring using Options struct. The struct with config should be passed when initializing with New method. Supported configurations are:
 
-* Host - statsd deamon's host; defaults to 127.0.0.1
-* Port - statsd deamon's port; defaults to 8125
+* Host - statsd daemon's host; defaults to 127.0.0.1
+* Port - statsd daemon's port; defaults to 8125
 * RequestKey - the namespace for stats; defaults to statsdKey
 
 Configuring namespace:
