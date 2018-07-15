@@ -23,7 +23,7 @@ import (
 1. Attach middleware to all routes
 ``` go
   r := gin.New()
-	r.Use(statsdMiddleware.New(statsdMiddleware.Options{}))
+  r.Use(statsdMiddleware.New(statsdMiddleware.Options{}))
 ```
 
 or 
@@ -32,6 +32,27 @@ or
 ``` go
   r := gin.New()
   r.GET("/", statsdMiddleware.New(statsdMiddleware.Options{}), func(c *gin.Context) {})
+```
+
+By default, the middleware will send status_code and response_time stats.
+All stats are namespaced under `statsdKey` key by default. This can be configured using options.
+
+### Configuring using Options
+The middleware allows configuring using Options struct. The struct with config should be passed when initializing with New method. Supported configurations are:
+
+* Host - statsd deamon's host; defaults to 127.0.0.1
+* Port - statsd deamon's port; defaults to 8125
+* RequestKey - the namespace for stats; defaults to statsdKey
+
+Configuring namespace:
+``` go
+  r := gin.New()
+  r.Use(statsdMiddleware.New(statsdMiddleware.Options{RequestKey: "myNamespace"}))
+```
+Configuring statsd host and port:
+``` go
+  r := gin.New()
+  r.Use(statsdMiddleware.New(statsdMiddleware.Options{Host: "myhost.statsd", Port: 8089}))
 ```
 
 ## Development
