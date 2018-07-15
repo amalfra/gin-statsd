@@ -20,6 +20,20 @@ import (
 )
 ```
 
+1. Attach middleware to all routes
+``` go
+  r := gin.New()
+	r.Use(statsdMiddleware.New(statsdMiddleware.Options{}))
+```
+
+or 
+
+2. Attach middleware to specific route
+``` go
+  r := gin.New()
+  r.GET("/", statsdMiddleware.New(statsdMiddleware.Options{}), func(c *gin.Context) {})
+```
+
 ## Development
 Questions, problems or suggestions? Please post them on the [issue tracker](https://github.com/amalfra/gin-statsd/issues).
 
