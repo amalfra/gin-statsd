@@ -1,0 +1,14 @@
+on:
+  release:
+    types: [published]
+name: Publish
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get tag
+        id: tag
+        uses: dawidd6/action-get-tag@v1
+      - run: |
+          echo "publishing version: ${{steps.tag.outputs.tag}}"
+          curl https://proxy.golang.org/github.com/amalfra/gin-statsd/@v/${{steps.tag.outputs.tag}}.info
