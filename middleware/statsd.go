@@ -1,9 +1,10 @@
 package middleware
 
 import (
-	"fmt"
 	"github.com/gin-gonic/gin"
 	"gopkg.in/alexcesaro/statsd.v2"
+
+	"fmt"
 	"time"
 )
 
