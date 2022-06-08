@@ -5,7 +5,7 @@ gin-statsd
 [![GoDoc](https://godoc.org/github.com/amalfra/gin-statsd?status.svg)](https://godoc.org/github.com/amalfra/gin-statsd/middleware)
 [![Go Report Card](https://goreportcard.com/badge/github.com/amalfra/gin-statsd)](https://goreportcard.com/report/github.com/amalfra/gin-statsd)
 
-A [Gin](https://gin-gonic.github.io/gin/) middleware for reporting to statsd daemon.
+A [Gin](https://github.com/gin-gonic/gin) middleware for reporting to statsd daemon.
 
 ## Installation
 You can download the middleware using
