@@ -1,4 +1,4 @@
-module github.com/amalfra/gin-statsd
+module github.com/amalfra/gin-statsd/v2
 
 go 1.16
 
