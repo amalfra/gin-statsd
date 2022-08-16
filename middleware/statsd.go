@@ -1,6 +1,8 @@
 package middleware
 
 import (
+	"strings"
+
 	"github.com/gin-gonic/gin"
 	"gopkg.in/alexcesaro/statsd.v2"
 
@@ -23,13 +25,17 @@ var handlerFunc = func(c *gin.Context) {
 			key = ""
 		}
 
+		path := strings.ReplaceAll(c.FullPath(), "/", "_")
+		path = strings.ReplaceAll(path, "*", "_")
+		path = strings.ReplaceAll(path, ":", "_")
+
 		// send status code
 		status := c.Writer.Status()
-		client.Increment(fmt.Sprintf("%sstatus_code.%d", key, status))
+		client.Increment(fmt.Sprintf("%s.%s.status_code.%d", key, path, status))
 
 		// send response time
 		duration := time.Since(startTime).Seconds() * 1000 // in milliseconds
-		client.Timing(fmt.Sprintf("%sresponse_time", key), duration)
+		client.Timing(fmt.Sprintf("%s.%s.response_time", key, path), duration)
 
 		printLog("Metrics sent", infoLevel)
 	}
