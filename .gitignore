@@ -13,3 +13,6 @@
 
 vendor/
 test.go
+
+# vscode
+.vscode
