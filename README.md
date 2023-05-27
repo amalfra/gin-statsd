@@ -2,21 +2,21 @@ gin-statsd
 ========
 [![GitHub release](https://img.shields.io/github/release/amalfra/gin-statsd.svg)](https://github.com/amalfra/gin-statsd/releases)
 ![Build Status](https://github.com/amalfra/gin-statsd/actions/workflows/test.yml/badge.svg?branch=main)
-[![GoDoc](https://godoc.org/github.com/amalfra/gin-statsd/v2?status.svg)](https://godoc.org/github.com/amalfra/gin-statsd/v2)
-[![Go Report Card](https://goreportcard.com/badge/github.com/amalfra/gin-statsd/v2)](https://goreportcard.com/report/github.com/amalfra/gin-statsd/v2)
+[![GoDoc](https://godoc.org/github.com/amalfra/gin-statsd/v3?status.svg)](https://godoc.org/github.com/amalfra/gin-statsd/v3)
+[![Go Report Card](https://goreportcard.com/badge/github.com/amalfra/gin-statsd/v3)](https://goreportcard.com/report/github.com/amalfra/gin-statsd/v3)
 
 A [Gin](https://github.com/gin-gonic/gin) middleware for reporting to statsd daemon.
 
 ## Installation
 You can download the middleware using
 ```sh
-go get github.com/amalfra/gin-statsd/v2
+go get github.com/amalfra/gin-statsd/v3
 ```
 ## Usage
 Next, import the package
 ``` go
 import (
-  statsdMiddleware "github.com/amalfra/gin-statsd/v2/middleware"
+  statsdMiddleware "github.com/amalfra/gin-statsd/v3/middleware"
 )
 ```
 
