@@ -7,6 +7,6 @@ vet:
 	go vet ./...
 
 test:
-	go test -v ./...
+	go test -v ./... -coverprofile=profile.cov
 
 build: fmt vet test

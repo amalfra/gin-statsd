@@ -13,3 +13,4 @@
 
 vendor/
 test.go
+*.cov

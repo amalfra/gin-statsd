@@ -16,3 +16,6 @@ jobs:
       uses: actions/checkout@v2
     - name: Test
       run: make test
+    - uses: shogo82148/actions-goveralls@v1
+      with:
+        path-to-profile: profile.cov
