@@ -6,9 +6,16 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
+      - name: Install Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.20.x
+      - name: Checkout code
+        uses: actions/checkout@v2
       - name: Get tag
         id: tag
         uses: dawidd6/action-get-tag@v1
       - run: |
           echo "publishing version: ${{steps.tag.outputs.tag}}"
-          curl https://proxy.golang.org/github.com/amalfra/gin-statsd/@v/${{steps.tag.outputs.tag}}.info
+          MOD_NAME=$(go list -m)
+          GOPROXY=proxy.golang.org go list -m $MOD_NAME@${{steps.tag.outputs.tag}}
