@@ -1,7 +1,8 @@
 module github.com/amalfra/gin-statsd/v4
 
-go 1.20
-toolchain go1.24.1
+go 1.23.0
+
+toolchain go1.23.7
 
 require (
 	github.com/gin-gonic/gin v1.9.1
