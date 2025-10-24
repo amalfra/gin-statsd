@@ -1,7 +1,7 @@
 gin-statsd
 ========
 [![GitHub release](https://img.shields.io/github/release/amalfra/gin-statsd.svg)](https://github.com/amalfra/gin-statsd/releases)
-![Build Status](https://github.com/amalfra/gin-statsd/actions/workflows/test.yml/badge.svg?branch=main)
+[![Build Status](https://github.com/amalfra/gin-statsd/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/amalfra/gin-statsd/actions/workflows/test.yml)
 [![GoDoc](https://godoc.org/github.com/amalfra/gin-statsd/v4?status.svg)](https://godoc.org/github.com/amalfra/gin-statsd/v4)
 [![Go Report Card](https://goreportcard.com/badge/github.com/amalfra/gin-statsd/v4)](https://goreportcard.com/report/github.com/amalfra/gin-statsd/v4)
 [![Coverage Status](https://coveralls.io/repos/github/amalfra/gin-statsd/badge.svg?branch=main)](https://coveralls.io/github/amalfra/gin-statsd?branch=main)
